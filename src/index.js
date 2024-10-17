@@ -3,6 +3,7 @@ import { home } from "./components/home"
 import { nav } from "./components/nav_bar/nav_bar"
 import { about } from "./components/about"
 import { contact } from "./components/contact"
+import { projects } from "./components/projects"
 export const mainContent = document.querySelector("#content")
 
 
@@ -34,4 +35,10 @@ const contactButton = document.querySelector(".nav-contact")
 contactButton.addEventListener("click", () => {
     clear()
     contact.add()
+})
+
+const projectButton = document.querySelector(".nav-projects")
+projectButton.addEventListener("click", () => {
+    clear()
+    projects.add()
 })

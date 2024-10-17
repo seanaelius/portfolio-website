@@ -1,5 +1,4 @@
 export { nav }; 
-import { mainContent } from "../..";
 const body = document.querySelector("body")
 
 const nav = (function() {
@@ -23,6 +22,11 @@ const nav = (function() {
     nav_about.classList.add("nav-about")
     nav_about.textContent = "About"
 
+    //DEFINE PROJECT BUTTON
+    const nav_project = document.createElement("button")
+    nav_project.classList.add("nav-projects")
+    nav_project.textContent = "Projects"    
+
 
     //DEFINE CONTACT BUTTON
     const nav_contact = document.createElement("button")
@@ -33,6 +37,7 @@ const nav = (function() {
     //ADD NAV OPTIONS TO NAV 
     nav_bar.appendChild(nav_home)
     nav_bar.appendChild(nav_about)
+    nav_bar.appendChild(nav_project)
     nav_bar.appendChild(nav_contact)
    
     //DEFINE LOGO
@@ -51,3 +56,15 @@ const nav = (function() {
     }  
     return { add }
 })();
+
+
+// NEED THE FOLLOWING:
+/*
+
+- Home [LOGO]
+- About
+- Projects
+- Contact
+
+- Brief Description About Myself
+*/
