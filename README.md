@@ -1,6 +1,6 @@
 # portfolio-website
 
-This is a portfolio website created to highlight some of the cool projects I have developed
+This is a portfolio website created to highlight some of my frontend/fullstack projects I have developed.
 
 ## Description
 
