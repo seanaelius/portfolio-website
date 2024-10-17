@@ -5,7 +5,7 @@ const home = (function() {
     const add = () => {
 
     //====================================================================================================================================================================================================
-    //SITE INTRODUCTION
+    // INTRODUCTION
     //====================================================================================================================================================================================================
     //DEFINE INTRO
     const intro = document.createElement("div")
@@ -17,24 +17,25 @@ const home = (function() {
     const right_side = document.createElement("div")
     right_side.classList.add("rs-intro")
 
-    //CREATE CONTENT FOR INTRO LS
+    //DEFINE CONTENT FOR INTRO LS
     const greetings = document.createElement("h1")
-    const name = document.createElement("h1")
     const bio = document.createElement("p")
-    greetings.textContent = "Hi, my name is"
-    name.textContent = "Sean Aelius"
-    bio.textContent =  " I am a recent Mechanical Engineering graduate from TMU (formerly Ryerson), currently transitioning to become a Full Stack Software Engineer through an online curriculum known as The Odin Project. " 
-    + "With a strong foundation in engineering and a passion for software development, I am eager to apply my analytical skills to create innovative solutions in the tech industry. "
+    greetings.textContent = "Hi, my name is Sean Aelius"
+    const abstract = document.createElement("h2")
+    abstract.textContent = "I'm a Software Engineer from Toronto, ON."
+    bio.textContent = "I am a lifelong learner looking to apply software solutions to real-world problems."
 
 
     //ADD CONTENT TO INTRO LS
     left_side.appendChild(greetings)
-    left_side.appendChild(name)
+    left_side.appendChild(abstract)
     left_side.appendChild(bio)
+    
     
     //ADD LS, RS TO INTRO
     intro.appendChild(left_side)
     intro.appendChild(right_side) 
+    
 
     //ADD INTRO TO CONTENT DIV
     mainContent.appendChild(intro)
@@ -42,8 +43,11 @@ const home = (function() {
     //====================================================================================================================================================================================================
     //ABOUT ME
     //====================================================================================================================================================================================================
-    
-
+    //DEFINE ABOUT ME SECTION
+    /*
+    bio.textContent =  " I am a recent Mechanical Engineering graduate from TMU (formerly Ryerson), currently transitioning to become a Full Stack Software Engineer through an online curriculum known as The Odin Project. " 
+    + "With a strong foundation in engineering and a passion for software development, I am eager to apply my analytical skills to create innovative solutions in the tech industry. "
+    */
     }  
     return { add }
 })();
