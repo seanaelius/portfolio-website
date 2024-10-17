@@ -1,3 +1,15 @@
 h1 {
     background-color: blue;
 }
+
+.ls-intro,
+.rs-intro{
+    display: flex;
+    border: 1px solid black;
+    width: 50vw;
+    height: 80vh;
+}
+
+.intro{
+    display: flex;
+}
