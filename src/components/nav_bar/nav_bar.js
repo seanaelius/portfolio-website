@@ -4,7 +4,7 @@ const body = document.querySelector("body")
 
 const nav = (function() {
     const add = () => {
-    
+   
     //DEFINE HEADER
     const header = document.createElement("header")
     header.classList.add("header")
