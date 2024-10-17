@@ -14,6 +14,20 @@ const home = (function() {
     const right_side = document.createElement("div")
     right_side.classList.add("rs-intro")
 
+    //ADD CONTENT TO INTRO LS
+    const greetings = document.createElement("h1")
+    const bio = document.createElement("p")
+    greetings.textContent = "Hello, my name is Sean!"
+    bio.textContent = "I'm a Recent Mechanical Engineering Graduate " 
+     + "turned into a Full-Stack Software Engineer."
+
+
+
+
+
+    left_side.appendChild(greetings)
+    left_side.appendChild(bio)
+    
     //ADD LS, RS TO INTRO
     intro.appendChild(left_side)
     intro.appendChild(right_side) 

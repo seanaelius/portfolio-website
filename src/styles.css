@@ -3,16 +3,16 @@ body {
     margin: 0px;
 }
 
-h1 {
-    background-color: blue;
-}
-
 .ls-intro,
 .rs-intro{
     display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
     width: 50vw;
-    height: 80vh;
+    height: 1000px;
 }
 
 .intro{
@@ -47,3 +47,4 @@ nav {
     width: 100vw;
     height: 80vh;
 }
+
