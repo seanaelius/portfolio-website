@@ -1,5 +1,6 @@
 export { nav }; 
 import { mainContent } from "../..";
+const body = document.querySelector("body")
 
 const nav = (function() {
     const add = () => {
@@ -46,7 +47,7 @@ const nav = (function() {
     header.appendChild(nav_bar)
 
     //ADD HEADER TO MAIN CONTENT
-    mainContent.appendChild(header)
+    body.prepend(header)
     }  
     return { add }
 })();
