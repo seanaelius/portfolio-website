@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+html {  
+    scroll-behavior: smooth;  
+}
+
 .ls-intro,
 .rs-intro{
     display: flex;
@@ -26,7 +30,6 @@
 
 header{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 2.5vh;
