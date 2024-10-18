@@ -42,23 +42,6 @@ nav {
     display: flex;
 }
 
-.about {
-    background-color: blue;
-    width: 100vw;
-    height: 80vh;
-}
-
-.contact {
-    background-color: green;
-    width: 100vw;
-    height: 80vh;
-}
-
-.project {
-    background-color: red;
-    width: 100vw;
-    height: 80vh;
-}
 
 .about-me{
     display: flex;
