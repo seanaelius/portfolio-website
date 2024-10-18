@@ -78,6 +78,8 @@ const home = (function() {
     
     //DEFINE TECH STACK 
     let tech_stack_list = ['html', 'css', 'js', 'react','node','git','python','r','matlab','sql',]
+    
+    //ADD CONTENT TO SKILLS
     for (let language in tech_stack_list) {
         let div = document.createElement("div")
         div.textContent = `${tech_stack_list[language]}`
@@ -85,19 +87,13 @@ const home = (function() {
         skills.appendChild(div)
     }
 
-    mainContent.appendChild(skills)
-    
-
-
-    //ADD CONTENT TO SKILLS
-
     //ADD SKILLS TO MAIN.CONTENT
+    mainContent.appendChild(skills)
 
-
-    /*
-    " I am a recent Mechanical Engineering graduate from TMU (formerly Ryerson), currently transitioning to become a Full Stack Software Engineer through an online curriculum known as The Odin Project. " 
-    + "With a strong foundation in engineering and a passion for software development, I am eager to apply my analytical skills to create innovative solutions in the tech industry. "
-    */
+    //====================================================================================================================================================================================================
+    //CONTACT
+    //====================================================================================================================================================================================================
+    
     }  
     return { add }
 })();
