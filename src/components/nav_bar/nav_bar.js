@@ -56,15 +56,3 @@ const nav = (function() {
     }  
     return { add }
 })();
-
-
-// NEED THE FOLLOWING:
-/*
-
-- Home [LOGO]
-- About
-- Projects
-- Contact
-
-- Brief Description About Myself
-*/
