@@ -1,9 +1,6 @@
 import "./styles.css"
 import { home } from "./components/home"
 import { nav } from "./components/nav_bar/nav_bar"
-import { about } from "./components/about"
-import { contact } from "./components/contact"
-import { projects } from "./components/projects"
 export const mainContent = document.querySelector("#content")
 
 
