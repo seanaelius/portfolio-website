@@ -15,27 +15,23 @@ function clear() {
 //ADD EVENT LISTENER FOR HOME BUTTON
 const homeButton = document.querySelector(".nav-home")
 homeButton.addEventListener("click", () => {
-    //clear()
-    //home.add()
+
 })
 
 
 //ADD EVENT LISTENER FOR ABOUT BUTTON
 const aboutButton = document.querySelector(".nav-about")
 aboutButton.addEventListener("click", () => {
-    //clear()
-    //about.add()
+ 
 })
 
 
 const contactButton = document.querySelector(".nav-contact")
 contactButton.addEventListener("click", () => {
-    //clear()
-    //contact.add()
+
 })
 
 const projectButton = document.querySelector(".nav-projects")
 projectButton.addEventListener("click", () => {
-    //clear()
-    //projects.add()
+
 })
