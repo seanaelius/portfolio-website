@@ -101,6 +101,10 @@ const home = (function() {
     //MECH ENGINEERING PROJECT
     //ODIN WEATHER APP
     //ODIN TO-DO LIST
+    
+    //CREATE A GOOGLE CHROME EXTENSION
+    //CONTRIBUTE TO OPEN SOURCE PROJECTS
+
 
     //====================================================================================================================================================================================================
     //CONTACT
