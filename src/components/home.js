@@ -24,7 +24,7 @@ import jira_icon from "./images/jira.svg"
 
 //IMAGE CREATER FUNCTION
 import { create_image } from "./new_image";
-
+import { create_element } from "./create_element";
 
 
 
@@ -103,21 +103,29 @@ const home = (function() {
     skills.appendChild(skills_title)
 
     mainContent.appendChild(skills)
+
+    const tech_stack = document.createElement("div")
+    tech_stack.classList.add("tech-stack")
+
     
     // TECH STACK
     // CREATE IMAGE FORMAT 
     // create_image(src, alt, classList)
 
     // ADD TECH STACK TO LIST OF SKILLS
-    skills.appendChild(create_image(html_icon, "html", "html-skill"))
-    skills.appendChild(create_image(css_icon, "css", "css-skill"))
-    skills.appendChild(create_image(js_icon,"js","js-skill"))
-    skills.appendChild(create_image(react_icon,"react","react-skill"))
-    skills.appendChild(create_image(python_icon,"python","python-skill"))
-    skills.appendChild(create_image(nodejs_icon,"nodejs","nodejs-skill"))
-    skills.appendChild(create_image(postgresql_icon,"postgresql","postgresql-skill"))
+    tech_stack.appendChild(create_image(html_icon, "html", "html-skill"))
+    tech_stack.appendChild(create_image(css_icon, "css", "css-skill"))
+    tech_stack.appendChild(create_image(js_icon,"js","js-skill"))
+    tech_stack.appendChild(create_image(react_icon,"react","react-skill"))
+    tech_stack.appendChild(create_image(python_icon,"python","python-skill"))
+    tech_stack.appendChild(create_image(nodejs_icon,"nodejs","nodejs-skill"))
+    tech_stack.appendChild(create_image(postgresql_icon,"postgresql","postgresql-skill"))
+
+    skills.appendChild(tech_stack)
   
     // ADD DEVELOPER TOOLS TO LIST OF SKILLS
+
+    skills.appendChild(create_element("h2", "title", "Developer Tools:"))
 
     //====================================================================================================================================================================================================
     //PROJECTS
