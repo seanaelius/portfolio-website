@@ -1,5 +1,11 @@
 export { home }; 
 import { mainContent } from "..";
+import html_icon from "./images/html-5.svg"
+import css_icon from "./images/css-3.svg"
+import { create_image } from "./new_image";
+
+
+
 
 const home = (function() {
     const add = () => {
@@ -74,21 +80,15 @@ const home = (function() {
     const skills_title = document.createElement("h2")
     skills_title.textContent = "Current Tech-Stack:"
     skills.appendChild(skills_title)
-    
-    //DEFINE TECH STACK 
-    let tech_stack_list = ['html', 'css', 'js', 'react','node','git','python','r','matlab','sql',]
-    
-    //ADD CONTENT TO SKILLS
-    for (let language in tech_stack_list) {
-        let div = document.createElement("div")
-        div.textContent = `${tech_stack_list[language]}`
-        div.classList = `${tech_stack_list[language]}`
-        skills.appendChild(div)
-    }
 
-    //ADD SKILLS TO MAIN.CONTENT
     mainContent.appendChild(skills)
+    
+    // TECH STACK
+    const html_skill = create_image(html_icon, "html", "html-skill")
+    skills.appendChild(html_skill)
+    // TOOLS
 
+    // OTHER SKILLS
 
     //====================================================================================================================================================================================================
     //PROJECTS
