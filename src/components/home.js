@@ -137,16 +137,21 @@ const home = (function() {
     //====================================================================================================================================================================================================
     //PROJECTS
     //====================================================================================================================================================================================================
-
-    //ODIN ETCH-A-SKETCH
-    //ODIN ROCK-PAPER-SCISSORS (CLEAN THIS UP)
-    //ODIN TIC-TAC-TOE (CLEAN THIS UP)
-    //EXPENSE TRACKER
-    //GENSHIN IMPACT WISH SIMULATOR
-    //MECH ENGINEERING PROJECT
-    //ODIN WEATHER APP
-    //ODIN TO-DO LIST
     
+    //PROJECT SECTION
+    const projects = create_element("section", "projects")
+    const project_title = create_element("h2","projects-title","Projects:")
+
+    //PROJECT LIST
+    const etch_a_sketch = create_element("div", "sketch-project")
+    const rock_paper_scissors = create_element("div","rps-project")
+    const tic_tac_toe = create_element("div",'tictactoe-project')
+    const wish_simulator = create_element("div","genshin-project")
+    const weather_app = create_element("div","weather-project")
+    const todo_app = create_element("div","todo-project")
+    
+    //TO BUILD IN THE FUTURE:
+    //BEAM LOADING APP
     //CREATE A GOOGLE CHROME EXTENSION
     //CONTRIBUTE TO OPEN SOURCE PROJECTS
 
@@ -154,17 +159,7 @@ const home = (function() {
     //====================================================================================================================================================================================================
     //CONTACT
     //====================================================================================================================================================================================================
-    
-    //DEVELOPER TOOLS
-    /*
-import bootstrap_icon from "./images/bootstrap.svg"
-import confluence_icon from "./images/confluence.svg"
-import docker_icon from "./images/docker.svg"
-import git_icon from "./images/git-icon.svg"
-import github_icon from "./images/github-icon.svg"
-import jira_icon from "./images/jira.svg"
-*/
-        
+   
     }  
     return { add }
 })();
