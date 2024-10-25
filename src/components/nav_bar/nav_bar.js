@@ -54,16 +54,7 @@ const nav = (function() {
     //ADD HEADER TO MAIN CONTENT
     body.prepend(header)
 
-    //PROJECTS TO BE ADDED
-    //ODIN ETCH-A-SKETCH
-    //ODIN CALCULATOR
-    //ODIN ROCK PAPER SCISSORS
-    //ODIN TIC-TAC-TOE
-    //ODIN ADMIN DASHBOARD
-    //GENSHIN IMPACT WISH SIMULATOR
-    //ODIN WEATHER APP
-    //ODIN TO-DO LIST
-    //FULL STACK APP
+
     }  
     return { add }
 })();
