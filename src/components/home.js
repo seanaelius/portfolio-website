@@ -129,7 +129,7 @@ const home = (function() {
     dev_tools.appendChild(create_image(docker_icon,"docker","docker-skill"))
     dev_tools.appendChild(create_image(git_icon,'git','git-skill'))
     dev_tools.appendChild(create_image(github_icon,'github','github-skill'))
-    dev_tools.appendChild(create_image(jira_icon,'jira','jira-icon'))
+    dev_tools.appendChild(create_image(jira_icon,'jira','jira-skill'))
 
     skills.appendChild(dev_tools)
 
@@ -139,17 +139,29 @@ const home = (function() {
     //====================================================================================================================================================================================================
     
     //PROJECT SECTION
-    const projects = create_element("section", "projects")
+    const projects_section = create_element("section", "projects")
     const project_title = create_element("h2","projects-title","Projects:")
 
     //PROJECT LIST
+    const proj_array = []
     const etch_a_sketch = create_element("div", "sketch-project")
     const rock_paper_scissors = create_element("div","rps-project")
     const tic_tac_toe = create_element("div",'tictactoe-project')
     const wish_simulator = create_element("div","genshin-project")
     const weather_app = create_element("div","weather-project")
     const todo_app = create_element("div","todo-project")
+
+    proj_array.push(etch_a_sketch,rock_paper_scissors,tic_tac_toe,wish_simulator,weather_app,todo_app)
+
+    for (let i in proj_array) {
+        projects_section.appendChild(proj_array[i])
+    }
+
+    mainContent.appendChild(projects_section)
     
+
+
+
     //TO BUILD IN THE FUTURE:
     //BEAM LOADING APP
     //CREATE A GOOGLE CHROME EXTENSION
