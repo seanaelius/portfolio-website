@@ -1,7 +1,28 @@
 export { home }; 
 import { mainContent } from "..";
+//IMPORT ICONS FROM IMAGES FOLDER
+//TECH STACK
 import html_icon from "./images/html-5.svg"
 import css_icon from "./images/css-3.svg"
+import js_icon from "./images/javascript.svg"
+import react_icon from "./images/react.svg"
+import python_icon from "./images/python.svg"
+import nodejs_icon from "./images/nodejs-icon.svg"
+import postgresql_icon from "./images/postgresql.svg"
+
+//DEVELOPER TOOLS
+import bootstrap_icon from "./images/bootstrap.svg"
+import confluence_icon from "./images/confluence.svg"
+import docker_icon from "./images/docker.svg"
+import git_icon from "./images/git-icon.svg"
+import github_icon from "./images/github-icon.svg"
+import jira_icon from "./images/jira.svg"
+
+//FRAMEWORKS
+//TO BE ADDED AT A LATER TIME
+
+
+//IMAGE CREATER FUNCTION
 import { create_image } from "./new_image";
 
 
@@ -84,11 +105,19 @@ const home = (function() {
     mainContent.appendChild(skills)
     
     // TECH STACK
-    const html_skill = create_image(html_icon, "html", "html-skill")
-    skills.appendChild(html_skill)
-    // TOOLS
+    // CREATE IMAGE FORMAT 
+    // create_image(src, alt, classList)
 
-    // OTHER SKILLS
+    // ADD TECH STACK TO LIST OF SKILLS
+    skills.appendChild(create_image(html_icon, "html", "html-skill"))
+    skills.appendChild(create_image(css_icon, "css", "css-skill"))
+    skills.appendChild(create_image(js_icon,"js","js-skill"))
+    skills.appendChild(create_image(react_icon,"react","react-skill"))
+    skills.appendChild(create_image(python_icon,"python","python-skill"))
+    skills.appendChild(create_image(nodejs_icon,"nodejs","nodejs-skill"))
+    skills.appendChild(create_image(postgresql_icon,"postgresql","postgresql-skill"))
+  
+    // ADD DEVELOPER TOOLS TO LIST OF SKILLS
 
     //====================================================================================================================================================================================================
     //PROJECTS

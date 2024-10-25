@@ -1,9 +1,9 @@
 export {create_image}
 
-function create_image(src, alt, title) {
+function create_image(src, alt, classList) {
     var img = document.createElement("img")
     img.src = src
     if ( alt != null ) img.alt = alt;
-    if ( title != null ) img.title = title;
+    if ( classList != null ) img.classList.add(classList);
     return img;
 }
