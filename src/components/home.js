@@ -96,21 +96,18 @@ const home = (function() {
     //SKILLS
     //====================================================================================================================================================================================================
     //DEFINE SKILLS
-    const skills = document.createElement("section")
-    skills.classList.add("skills")
-    const skills_title = document.createElement("h2")
-    skills_title.textContent = "Current Tech-Stack:"
-    skills.appendChild(skills_title)
+    const skills = create_element("section","skills")
+    const skills_title = create_element("h2","skills-title","Current Tech-Stack:")
+    const tech_stack = create_element("div","tech-stack")
 
-    mainContent.appendChild(skills)
-
-    const tech_stack = document.createElement("div")
-    tech_stack.classList.add("tech-stack")
-
+    tech_stack.appendChild(skills_title)
     
     // TECH STACK
     // CREATE IMAGE FORMAT 
     // create_image(src, alt, classList)
+
+    //CREATE ELEMENT FORMAT
+    // create_element(type, classList, textContent)
 
     // ADD TECH STACK TO LIST OF SKILLS
     tech_stack.appendChild(create_image(html_icon, "html", "html-skill"))
@@ -124,9 +121,19 @@ const home = (function() {
     skills.appendChild(tech_stack)
   
     // ADD DEVELOPER TOOLS TO LIST OF SKILLS
+    const dev_tools_title = create_element("h2", "dev-tools-title", "Developer Tools:")
+    const dev_tools = create_element("div","dev-tools")
+    dev_tools.appendChild(dev_tools_title)
 
-    skills.appendChild(create_element("h2", "title", "Developer Tools:"))
+    dev_tools.appendChild(create_image(confluence_icon,"confluence", "confluence-skill"))
+    dev_tools.appendChild(create_image(docker_icon,"docker","docker-skill"))
+    dev_tools.appendChild(create_image(git_icon,'git','git-skill'))
+    dev_tools.appendChild(create_image(github_icon,'github','github-skill'))
+    dev_tools.appendChild(create_image(jira_icon,'jira','jira-icon'))
 
+    skills.appendChild(dev_tools)
+
+    mainContent.appendChild(skills)
     //====================================================================================================================================================================================================
     //PROJECTS
     //====================================================================================================================================================================================================
@@ -134,6 +141,7 @@ const home = (function() {
     //ODIN ETCH-A-SKETCH
     //ODIN ROCK-PAPER-SCISSORS (CLEAN THIS UP)
     //ODIN TIC-TAC-TOE (CLEAN THIS UP)
+    //EXPENSE TRACKER
     //GENSHIN IMPACT WISH SIMULATOR
     //MECH ENGINEERING PROJECT
     //ODIN WEATHER APP
@@ -147,7 +155,15 @@ const home = (function() {
     //CONTACT
     //====================================================================================================================================================================================================
     
-    
+    //DEVELOPER TOOLS
+    /*
+import bootstrap_icon from "./images/bootstrap.svg"
+import confluence_icon from "./images/confluence.svg"
+import docker_icon from "./images/docker.svg"
+import git_icon from "./images/git-icon.svg"
+import github_icon from "./images/github-icon.svg"
+import jira_icon from "./images/jira.svg"
+*/
         
     }  
     return { add }
