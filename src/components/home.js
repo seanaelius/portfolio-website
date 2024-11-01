@@ -11,7 +11,6 @@ import nodejs_icon from "./images/nodejs-icon.svg"
 import postgresql_icon from "./images/postgresql.svg"
 
 //DEVELOPER TOOLS
-import bootstrap_icon from "./images/bootstrap.svg"
 import confluence_icon from "./images/confluence.svg"
 import docker_icon from "./images/docker.svg"
 import git_icon from "./images/git-icon.svg"
