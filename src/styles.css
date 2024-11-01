@@ -23,18 +23,15 @@ html {
 
 
 
-header{
+header {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    height: 2.5vh;
-    width: 100vw;
-    position: fixed;
-    border: 2px solid black;
 }
 
 nav {
     display: flex;
+    flex-direction: row;
 }
 
 
@@ -59,4 +56,12 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+}
+
+.tech-stack-container, 
+.dev-tools-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
