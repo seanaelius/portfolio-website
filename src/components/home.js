@@ -94,14 +94,15 @@ const home = (function() {
     //====================================================================================================================================================================================================
     //DEFINE SKILLS
     const skills = create_element("section","skills")
-    const skills_title = create_element("h2","skills-title","Current Tech-Stack:")
+    const skills_title = create_element("h2","skills-title","Skills")
     const tech_stack = create_element("div","tech-stack")
 
-    tech_stack.appendChild(skills_title)
+    skills.appendChild(skills_title)
 
-    const tech_stack_container =  create_element("div", "tech-stack-container")
-    
     // TECH STACK
+    const tech_stack_container =  create_element("div", "tech-stack-container")
+    const tech_stack_title = create_element("h2", "tech-stack-title", "Tech Stack:")
+
     // CREATE IMAGE FORMAT 
     // create_image(src, alt, classList)
 
@@ -117,6 +118,7 @@ const home = (function() {
     tech_stack_container.appendChild(create_image(nodejs_icon,"nodejs","skill"))
     tech_stack_container.appendChild(create_image(postgresql_icon,"postgresql","skill"))
 
+    tech_stack.appendChild(tech_stack_title)
     tech_stack.appendChild(tech_stack_container)
 
     skills.appendChild(tech_stack)
@@ -143,7 +145,7 @@ const home = (function() {
     
     //PROJECT SECTION
     const projects_section = create_element("section", "projects")
-    const project_title = create_element("h2","projects-title","Projects:")
+    const project_title = create_element("h2","projects-title","Projects")
     projects_section.appendChild(project_title)
 
     //CREATE PROJECT SYNTAX:
@@ -165,10 +167,6 @@ const home = (function() {
     
     mainContent.appendChild(projects_section)
 
-    
-
-
-    
     //TO BUILD IN THE FUTURE:
     //BATTLESHIP
     //BEAM LOADING APP
@@ -179,7 +177,15 @@ const home = (function() {
     //====================================================================================================================================================================================================
     //CONTACT
     //====================================================================================================================================================================================================
-   
+    const contact_section = create_element("section", "contact")
+    const contact_title = create_element("h2", "Contact")
+    contact_section.appendChild(contact_title)
+
+    //CREATE A FORM HERE
+
+
+
+
     }  
     return { add }
 })();
