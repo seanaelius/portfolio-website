@@ -19,10 +19,5 @@ function create_project(name, title, desc) {
     return proj;
 }
 
-
-//EXAMPLE
-//etch_a_sketch.appendChild(create_element("p","sketch-para","An Etch-A-Sketch that utilizes HTML, CSS, and JavaScript by applying DOM Manipulation and Event Listeners to create a sketch pad app."))
-//etch_a_sketch.appendChild(create_element("h3","sketch-title","Etch-A-Sketch"))
-
 //OPTIONAL IMAGE TO BE ADDED
 //etch_a_sketch.appendChild(create_image())

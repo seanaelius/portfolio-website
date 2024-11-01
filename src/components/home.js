@@ -148,30 +148,22 @@ const home = (function() {
     const project_title = create_element("h2","projects-title","Projects:")
     projects_section.appendChild(project_title)
 
-    /*
-        CREATE PROJECT SYNTAX:
-        create_project(name, title, desc)
-    */
+    //CREATE PROJECT SYNTAX:
+    //create_project(name, title, desc)
 
     //PROJECTS
-    let proj_array = []
     const etch_a_sketch =  create_project("sketch", "Etch-A-Sketch", "An Etch-A-Sketch that utilizes HTML, CSS, and JavaScript by applying DOM Manipulation and Event Listeners to create a sketch pad app.")
-    
-    /*
-    const rock_paper_scissors = create_element("div","rps-project")
-    const tic_tac_toe = create_element("div",'tictactoe-project')
-    const wish_simulator = create_element("div","genshin-project")
-    const weather_app = create_element("div","weather-project")
-    const todo_app = create_element("div","todo-project")
-    */
-    proj_array.push(etch_a_sketch)
-    //,rock_paper_scissors,tic_tac_toe,wish_simulator,weather_app,todo_app
+    const tic_tac_toe = create_project("tictactoe","Tic-Tac-Toe", "A front-end tic-tac-toe web app that uses JavaScript Objects and modular design to create a classic game.")
+    const weather_app = create_project("weather", "Weather App",)
+    const todo_app = create_project("todo", "To-Do List",)
+    const wish_simulator = create_project("genshin","Genshin Impact Wish Simulator [IN-PROGRESS]", 'An online web simulation of a famous gacha game wishing system from a title known as "Genshin Impact" by HoyoVerse.')
 
     //APPEND ALL PROJECTS
+    let proj_array = [];
+    proj_array.push(etch_a_sketch,tic_tac_toe,weather_app,todo_app,wish_simulator)
     for (let i in proj_array) {
         projects_section.appendChild(proj_array[i])
-    }
-
+    };
     
     mainContent.appendChild(projects_section)
 
@@ -180,6 +172,7 @@ const home = (function() {
 
     
     //TO BUILD IN THE FUTURE:
+    //BATTLESHIP
     //BEAM LOADING APP
     //CREATE A GOOGLE CHROME EXTENSION
     //CONTRIBUTE TO OPEN SOURCE PROJECTS
