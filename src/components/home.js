@@ -22,9 +22,14 @@ import jira_icon from "./images/jira.svg"
 //TO BE ADDED AT A LATER TIME
 
 
-//IMAGE CREATER FUNCTION
+//IMAGE CREATOR FUNCTION
 import { create_image } from "./new_image";
+
+//ELEMENT CREATOR FUNCTION
 import { create_element } from "./create_element";
+
+//PROJECT CREATOR FUNCTION
+import { create_project } from "./create_project";
 
 
 
@@ -49,8 +54,8 @@ const home = (function() {
     const bio = document.createElement("p")
     greetings.textContent = "Hi, my name is Sean Aelius"
     const abstract = document.createElement("h2")
-    abstract.textContent = "I'm a Software Engineer located in Toronto, ON."
-    bio.textContent = "I am a lifelong learner looking to apply software solutions to real-world problems."
+    abstract.textContent = "I'm a Software Engineer"
+    bio.textContent = "I am a lifelong learner looking to apply software solutions to real-world problems"
 
 
     //ADD CONTENT TO INTRO LS
@@ -141,27 +146,39 @@ const home = (function() {
     //PROJECT SECTION
     const projects_section = create_element("section", "projects")
     const project_title = create_element("h2","projects-title","Projects:")
+    projects_section.appendChild(project_title)
 
-    //PROJECT LIST
-    const proj_array = []
-    const etch_a_sketch = create_element("div", "sketch-project")
+    /*
+        CREATE PROJECT SYNTAX:
+        create_project(name, title, desc)
+    */
+
+    //PROJECTS
+    let proj_array = []
+    const etch_a_sketch =  create_project("sketch", "Etch-A-Sketch", "An Etch-A-Sketch that utilizes HTML, CSS, and JavaScript by applying DOM Manipulation and Event Listeners to create a sketch pad app.")
+    
+    /*
     const rock_paper_scissors = create_element("div","rps-project")
     const tic_tac_toe = create_element("div",'tictactoe-project')
     const wish_simulator = create_element("div","genshin-project")
     const weather_app = create_element("div","weather-project")
     const todo_app = create_element("div","todo-project")
+    */
+    proj_array.push(etch_a_sketch)
+    //,rock_paper_scissors,tic_tac_toe,wish_simulator,weather_app,todo_app
 
-    proj_array.push(etch_a_sketch,rock_paper_scissors,tic_tac_toe,wish_simulator,weather_app,todo_app)
-
+    //APPEND ALL PROJECTS
     for (let i in proj_array) {
         projects_section.appendChild(proj_array[i])
     }
 
+    
     mainContent.appendChild(projects_section)
+
     
 
 
-
+    
     //TO BUILD IN THE FUTURE:
     //BEAM LOADING APP
     //CREATE A GOOGLE CHROME EXTENSION
