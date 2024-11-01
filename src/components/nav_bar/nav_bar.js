@@ -54,6 +54,8 @@ const nav = (function() {
     //ADD HEADER TO MAIN CONTENT
     body.prepend(header)
 
+    //SEARCH UP SCROLL INTO VIEW METHODS OF JAVASCRIPT
+
 
     }  
     return { add }

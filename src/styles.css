@@ -7,26 +7,21 @@ html {
     scroll-behavior: smooth;  
 }
 
-.ls-intro,
-.rs-intro{
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    width: 50vw;
-    height: 97.5vh;
-}
-
-.ls-intro {
-    justify-content: center;
-    align-items: flex-start;
-}
 
 .intro{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    border: 1px solid black;
+    width: 100vw;
+    height: 97.5vh;
 }
+
+
+
 
 header{
     display: flex;
@@ -35,7 +30,7 @@ header{
     height: 2.5vh;
     width: 100vw;
     position: fixed;
-    background-color: rgb(28, 28, 95);
+    border: 2px solid black;
 }
 
 nav {
@@ -50,4 +45,18 @@ nav {
     align-items: center;
     height: 97.5vh;
     width: 100vw;
+}
+
+
+.skill {
+    width: 200px;
+    /*border: 1px solid black;   */
+}
+
+.tech-stack,
+.dev-tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }

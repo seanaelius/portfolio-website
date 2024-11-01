@@ -42,11 +42,8 @@ const home = (function() {
     const intro = document.createElement("section")
     intro.classList.add("intro")
 
-    //DEFINE LS, RS
-    const left_side = document.createElement("div")
-    left_side.classList.add("ls-intro")
-    const right_side = document.createElement("div")
-    right_side.classList.add("rs-intro")
+    const intro_text = document.createElement("div")
+    intro_text.classList.add("intro-text")
 
     //DEFINE CONTENT FOR INTRO LS
     const greetings = document.createElement("h1")
@@ -55,17 +52,13 @@ const home = (function() {
     const abstract = document.createElement("h2")
     abstract.textContent = "I'm a Software Engineer"
     bio.textContent = "I am a lifelong learner looking to apply software solutions to real-world problems"
-
-
-    //ADD CONTENT TO INTRO LS
-    left_side.appendChild(greetings)
-    left_side.appendChild(abstract)
-    left_side.appendChild(bio)
     
-    
-    //ADD LS, RS TO INTRO
-    intro.appendChild(left_side)
-    intro.appendChild(right_side) 
+    //ADD GREETINGS, ABSTRACT, BIO TO INTRO
+    intro_text.appendChild(greetings)
+    intro_text.appendChild(abstract) 
+    intro_text.appendChild(bio) 
+
+    intro.appendChild(intro_text)
     
 
     //ADD INTRO TO CONTENT DIV
@@ -105,6 +98,8 @@ const home = (function() {
     const tech_stack = create_element("div","tech-stack")
 
     tech_stack.appendChild(skills_title)
+
+    const tech_stack_container =  create_element("div", "tech-stack-container")
     
     // TECH STACK
     // CREATE IMAGE FORMAT 
@@ -114,13 +109,15 @@ const home = (function() {
     // create_element(type, classList, textContent)
 
     // ADD TECH STACK TO LIST OF SKILLS
-    tech_stack.appendChild(create_image(html_icon, "html", "html-skill"))
-    tech_stack.appendChild(create_image(css_icon, "css", "css-skill"))
-    tech_stack.appendChild(create_image(js_icon,"js","js-skill"))
-    tech_stack.appendChild(create_image(react_icon,"react","react-skill"))
-    tech_stack.appendChild(create_image(python_icon,"python","python-skill"))
-    tech_stack.appendChild(create_image(nodejs_icon,"nodejs","nodejs-skill"))
-    tech_stack.appendChild(create_image(postgresql_icon,"postgresql","postgresql-skill"))
+    tech_stack_container.appendChild(create_image(html_icon, "html", "skill"))
+    tech_stack_container.appendChild(create_image(css_icon, "css", "skill"))
+    tech_stack_container.appendChild(create_image(js_icon,"js","skill"))
+    tech_stack_container.appendChild(create_image(react_icon,"react","skill"))
+    tech_stack_container.appendChild(create_image(python_icon,"python","skill"))
+    tech_stack_container.appendChild(create_image(nodejs_icon,"nodejs","skill"))
+    tech_stack_container.appendChild(create_image(postgresql_icon,"postgresql","skill"))
+
+    tech_stack.appendChild(tech_stack_container)
 
     skills.appendChild(tech_stack)
   
@@ -128,13 +125,15 @@ const home = (function() {
     const dev_tools_title = create_element("h2", "dev-tools-title", "Developer Tools:")
     const dev_tools = create_element("div","dev-tools")
     dev_tools.appendChild(dev_tools_title)
+    const dev_tools_container =  create_element("div", "dev-tools-container")
 
-    dev_tools.appendChild(create_image(confluence_icon,"confluence", "confluence-skill"))
-    dev_tools.appendChild(create_image(docker_icon,"docker","docker-skill"))
-    dev_tools.appendChild(create_image(git_icon,'git','git-skill'))
-    dev_tools.appendChild(create_image(github_icon,'github','github-skill'))
-    dev_tools.appendChild(create_image(jira_icon,'jira','jira-skill'))
+    dev_tools_container.appendChild(create_image(confluence_icon, "confluence", "skill"))
+    dev_tools_container.appendChild(create_image(docker_icon, "docker", "skill"))
+    dev_tools_container.appendChild(create_image(git_icon, "git", "skill"))
+    dev_tools_container.appendChild(create_image(github_icon, "github", "skill"))
+    dev_tools_container.appendChild(create_image(jira_icon, "jira", "skill"))
 
+    dev_tools.appendChild(dev_tools_container)
     skills.appendChild(dev_tools)
 
     mainContent.appendChild(skills)
