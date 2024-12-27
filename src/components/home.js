@@ -95,11 +95,10 @@ const home = (function() {
     //DEFINE SKILLS
     const skills = create_element("section","skills")
     const skills_title = create_element("h2","skills-title","Skills")
-    const tech_stack = create_element("div","tech-stack")
-
-    skills.appendChild(skills_title)
+    const skills_container = create_element("div","skills-container")
 
     // TECH STACK
+    const tech_stack = create_element("div","tech-stack")
     const tech_stack_container =  create_element("div", "tech-stack-container")
     const tech_stack_title = create_element("h2", "tech-stack-title", "Tech Stack:")
 
@@ -117,16 +116,10 @@ const home = (function() {
     tech_stack_container.appendChild(create_image(python_icon,"python","skill"))
     tech_stack_container.appendChild(create_image(nodejs_icon,"nodejs","skill"))
     tech_stack_container.appendChild(create_image(postgresql_icon,"postgresql","skill"))
-
-    tech_stack.appendChild(tech_stack_title)
-    tech_stack.appendChild(tech_stack_container)
-
-    skills.appendChild(tech_stack)
   
     // ADD DEVELOPER TOOLS TO LIST OF SKILLS
     const dev_tools_title = create_element("h2", "dev-tools-title", "Developer Tools:")
     const dev_tools = create_element("div","dev-tools")
-    dev_tools.appendChild(dev_tools_title)
     const dev_tools_container =  create_element("div", "dev-tools-container")
 
     dev_tools_container.appendChild(create_image(confluence_icon, "confluence", "skill"))
@@ -135,8 +128,17 @@ const home = (function() {
     dev_tools_container.appendChild(create_image(github_icon, "github", "skill"))
     dev_tools_container.appendChild(create_image(jira_icon, "jira", "skill"))
 
+    dev_tools.appendChild(dev_tools_title)
     dev_tools.appendChild(dev_tools_container)
-    skills.appendChild(dev_tools)
+
+    tech_stack.appendChild(tech_stack_title)
+    tech_stack.appendChild(tech_stack_container)
+
+    skills_container.appendChild(tech_stack)
+    skills_container.appendChild(dev_tools)
+    
+    skills.appendChild(skills_title)
+    skills.appendChild(skills_container)
 
     mainContent.appendChild(skills)
     //====================================================================================================================================================================================================
@@ -146,6 +148,7 @@ const home = (function() {
     //PROJECT SECTION
     const projects_section = create_element("section", "projects")
     const project_title = create_element("h2","projects-title","Projects")
+    const project_container = create_element("div", "projects-container")
     projects_section.appendChild(project_title)
 
     //CREATE PROJECT SYNTAX:
@@ -162,9 +165,10 @@ const home = (function() {
     let proj_array = [];
     proj_array.push(etch_a_sketch,tic_tac_toe,weather_app,todo_app,wish_simulator)
     for (let i in proj_array) {
-        projects_section.appendChild(proj_array[i])
+        project_container.appendChild(proj_array[i])
     };
     
+    projects_section.appendChild(project_container)
     mainContent.appendChild(projects_section)
 
     //TO BUILD IN THE FUTURE:
@@ -172,6 +176,7 @@ const home = (function() {
     //BEAM LOADING APP
     //CREATE A GOOGLE CHROME EXTENSION
     //CONTRIBUTE TO OPEN SOURCE PROJECTS
+    //ROBOTICS PROJECT
 
 
     //====================================================================================================================================================================================================
